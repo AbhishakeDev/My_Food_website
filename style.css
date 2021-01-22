@@ -4,6 +4,9 @@ body {
     padding: 0px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 /*--------Top-nav----------*/
 
@@ -79,16 +82,35 @@ header {
 .top-button:hover{
     transition: transform .5s ease;
     transform: scale(1.1);
-
 }
 
 @media (max-width: 720px) {
+    #top-nav .top-button {
+        padding: 9px 10px;
+        border: 0px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+        outline: none;
+        background-color: rgb(170, 210, 54);
+    }
     #top-nav ul li a {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
+        font-size: 10px;
+        margin-right: 10px;
     }
     #top-nav .top-button {
         margin-right: 0
+    }
+    #top-nav ul {
+        float: right;
+        list-style-type: none;
+        padding: 2px;
+        margin: 0px;
+        overflow: hidden;
     }
 }
 
@@ -251,47 +273,37 @@ header {
     margin-bottom: 40px;
 }
 
-#items {
+
+/* Caraousal */
+
+.Carausal{
+    height: 70%;
     width: 100%;
-    max-width: 80%;
-    display: flex;
-    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.item {
-    width: 25%;
-    text-align: center;
-    padding: 24px;
+.mySlides{
+    margin: auto;
+    width: 600px;
+    height: 400px;
 }
 
-.icon {
-    display: inline-block;
-    background-color: #e3b375;
-    border-radius: 50%;
-    padding: 40px;
-    color: white;
-    transition: all 0.3s;
+@media (max-width: 720px) {
+    .mySlides{
+        margin: auto;
+        width: 300px;
+        height: 200px;
+    }
+    .Carausal{
+        height: 70%;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
+/* end of carousel */
 
-.item:hover .icon {
-    transform: scale(1.1, 1.1);
-}
-
-.icon i {
-    font-size: 50px;
-}
-
-.item h3 {
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.item p {
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    color: #8b8b99;
-}
 
 @media (max-width: 720px) {
     #section-2 {
@@ -299,18 +311,9 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 10px;
     }
     #section-2>h3 {
         font-size: 20px;
-    }
-    #items {
-        flex-direction: column;
-        text-align: center;
-    }
-    .item {
-        width: 100%;
-        box-sizing: border-box;
     }
 }
 
@@ -669,22 +672,6 @@ header {
     padding: 12px 20px;
     border-radius: 4px;
     background-color: rgb(170, 210, 54);
-}
-
-/* Caraousal */
-
-.Carausal{
-    height: 70%;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    justify-content: center;
-}
-
-.mySlides{
-    margin: auto;
-    width: 600px;
-    height: 400px;
 }
 
 /*------------Footer----------------*/
